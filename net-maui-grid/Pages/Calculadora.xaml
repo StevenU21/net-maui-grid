@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="net_maui_grid.Pages.Calculadora"
+             Title="Calculadora">
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="*, *, *, *" Padding="20" RowSpacing="15" ColumnSpacing="10">
+
+        <Label Text="Calculadora"
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Margin="0,0,0,10" />
+
+        <Entry x:Name="FirstNumberEntry" 
+               Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+               Placeholder="Número 1" 
+               Keyboard="Numeric" 
+               HorizontalOptions="Fill" 
+               VerticalOptions="Center" 
+               Margin="0,0,5,0" />
+        <Entry x:Name="SecondNumberEntry" 
+               Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" 
+               Placeholder="Número 2" 
+               Keyboard="Numeric" 
+               HorizontalOptions="Fill" 
+               VerticalOptions="Center" 
+               Margin="5,0,0,0" />
+
+        <Button Text="+" 
+                Grid.Row="2" Grid.Column="0" 
+                BackgroundColor="#4CAF50" 
+                TextColor="White" 
+                CornerRadius="10" 
+                Clicked="OnOperationClicked" />
+        <Button Text="-" 
+                Grid.Row="2" Grid.Column="1" 
+                BackgroundColor="#2196F3" 
+                TextColor="White" 
+                CornerRadius="10" 
+                Clicked="OnOperationClicked" />
+        <Button Text="×" 
+                Grid.Row="2" Grid.Column="2" 
+                BackgroundColor="#FFC107" 
+                TextColor="White" 
+                CornerRadius="10" 
+                Clicked="OnOperationClicked" />
+        <Button Text="÷" 
+                Grid.Row="2" Grid.Column="3" 
+                BackgroundColor="#F44336" 
+                TextColor="White" 
+                CornerRadius="10" 
+                Clicked="OnOperationClicked" />
+
+        <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" 
+               BackgroundColor="Black" 
+               CornerRadius="10" 
+               Padding="10" 
+               HasShadow="True">
+            <Label x:Name="ResultLabel" 
+                   Text="Resultado: " 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" 
+                   FontSize="18" 
+                   FontAttributes="Bold" />
+        </Frame>
+    </Grid>
+</ContentPage>

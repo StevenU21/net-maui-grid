@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="net_maui_grid.Pages.Registro"
+             Title="Registro">
+    
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *" Padding="20" RowSpacing="15" ColumnSpacing="10">
+
+        <Label Text="Registro de ingreso de materia prima"
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Margin="0,0,0,10" />
+
+        <Label Text="Nombre del producto:"
+               Grid.Row="1" Grid.Column="0"
+               VerticalOptions="Center"
+               HorizontalOptions="Start" />
+        <Entry x:Name="NombreProductoEntry"
+               Grid.Row="1" Grid.Column="1"
+               Placeholder="Ingrese el nombre del producto"
+               HorizontalOptions="Fill" />
+
+        <Label Text="Cantidad de materia prima:"
+               Grid.Row="2" Grid.Column="0"
+               VerticalOptions="Center"
+               HorizontalOptions="Start" />
+        <Entry x:Name="CantidadMateriaPrimaEntry"
+               Grid.Row="2" Grid.Column="1"
+               Placeholder="Ingrese la cantidad"
+               Keyboard="Numeric"
+               HorizontalOptions="Fill" />
+
+        <Label Text="Condiciones de temperatura:"
+               Grid.Row="3" Grid.Column="0"
+               VerticalOptions="Center"
+               HorizontalOptions="Start" />
+        <Entry x:Name="CondicionesTemperaturaEntry"
+               Grid.Row="3" Grid.Column="1"
+               Placeholder="Ingrese las condiciones"
+               HorizontalOptions="Fill" />
+
+        <Button Text="Ingresar producto"
+                Grid.Row="4" Grid.Column="0"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                CornerRadius="10"
+                Clicked="OnIngresarProductoClicked" />
+        <Button Text="Ver Stock"
+                Grid.Row="4" Grid.Column="1"
+                BackgroundColor="#2196F3"
+                TextColor="White"
+                CornerRadius="10"
+                Clicked="OnVerStockClicked" />
+
+        <Label x:Name="ResultadoLabel"
+               Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+               Text="Resultado: "
+               FontSize="16"
+               FontAttributes="Italic"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="Gray" />
+    </Grid>
+</ContentPage>

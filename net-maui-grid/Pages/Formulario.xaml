@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="net_maui_grid.Pages.Formulario"
+             Title="Formulario">
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *" Padding="20" RowSpacing="15" ColumnSpacing="10">
+
+        <Label Text="Nombre:" 
+               Grid.Row="0" Grid.Column="0" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Start" />
+        <Entry x:Name="NombreEntry" 
+               Grid.Row="0" Grid.Column="1" 
+               Placeholder="Ingrese su nombre" 
+               HorizontalOptions="Fill" />
+
+        <Label Text="Correo electrónico:" 
+               Grid.Row="1" Grid.Column="0" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Start" />
+        <Entry x:Name="CorreoEntry" 
+               Grid.Row="1" Grid.Column="1" 
+               Placeholder="Ingrese su correo" 
+               Keyboard="Email" 
+               HorizontalOptions="Fill" />
+
+        <Label Text="Mensaje:" 
+               Grid.Row="2" Grid.Column="0" 
+               VerticalOptions="Start" 
+               HorizontalOptions="Start" />
+        <Editor x:Name="MensajeEditor" 
+                Grid.Row="2" Grid.Column="1" 
+                Placeholder="Escriba su mensaje" 
+                AutoSize="TextChanges" 
+                HeightRequest="100" 
+                HorizontalOptions="Fill" />
+
+        <Button Text="Enviar" 
+                Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+                BackgroundColor="#4CAF50" 
+                TextColor="White" 
+                CornerRadius="10" 
+                HorizontalOptions="Center" 
+                Clicked="OnEnviarClicked" />
+
+        <Label x:Name="ResultadoLabel" 
+               Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+               Text="Resultado: " 
+               FontSize="16" 
+               FontAttributes="Italic" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" 
+               TextColor="Gray" />
+    </Grid>
+</ContentPage>

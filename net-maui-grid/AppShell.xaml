@@ -4,12 +4,24 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:net_maui_grid"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:pages="clr-namespace:net_maui_grid.Pages"
+    Shell.FlyoutBehavior="Flyout"
     Title="net_maui_grid">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="Login">
+        <ShellContent ContentTemplate="{DataTemplate pages:Login}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Calculadora">
+        <ShellContent ContentTemplate="{DataTemplate pages:Calculadora}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Formulario">
+        <ShellContent ContentTemplate="{DataTemplate pages:Formulario}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Registro">
+        <ShellContent ContentTemplate="{DataTemplate pages:Registro}" />
+    </FlyoutItem>
 
 </Shell>
